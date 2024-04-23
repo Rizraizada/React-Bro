@@ -45,9 +45,33 @@ function Calculator() {
   );
 }
 
+function Navbar() {
+  return (
+    <nav className="navbar">
+      <div className="container">
+        <h1 className="navbar-brand">Calculator App</h1>
+      </div>
+    </nav>
+  );
+}
+
+function HomePage() {
+  return (
+    <div>
+      <Navbar />
+      <div className="homepage">
+        <h1>Welcome to My Calculator</h1>
+        <p>This is a simple calculator application built with React.</p>
+        <button onClick={() => window.location.href = '/calculator'}>Go to Calculator</button>
+      </div>
+      <Calculator />
+    </div>
+  );
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <Calculator />
+    <HomePage />
   </React.StrictMode>,
   document.getElementById('root')
 );
