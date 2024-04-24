@@ -3,14 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Navbar from './components/Navbar';
 import Calculator from './components/Calculator';
+import Carousel from './components/Carousel'; // Import the Carousel component
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function HomePage() {
   return (
     <div>
+      {/* Navbar */}
+      <Navbar />
+      
+      {/* Carousel */}
+      <Carousel />
+
       <div className="homepage">
         <h1>Welcome to My Calculator</h1>
-       </div>
+      </div>
+      
       {/* Render the Calculator component */}
       <Calculator />
     </div>
@@ -19,7 +27,6 @@ function HomePage() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
     <HomePage />
   </React.StrictMode>,
   document.getElementById('root')
