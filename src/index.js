@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Calculator from './components/Calculator';
 import Carousel from './components/Carousel'; // Import the Carousel component
 import 'bootstrap/dist/css/bootstrap.min.css';
+ 
 
 function HomePage() {
   return (

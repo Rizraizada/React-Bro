@@ -5,6 +5,8 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import ApiDemo from '../pages/ApiDemo'; // Import the ApiDemo component
 
 function NavScrollExample() {
   return (
@@ -18,13 +20,14 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1" className="text-white">Home</Nav.Link>
-            <Nav.Link href="#action2" className="text-white">Link</Nav.Link>
+            <Nav.Link as={Link} to="/" className="text-white">Home</Nav.Link>
+            {/* Link to the ApiDemo component */}
+            <Nav.Link as={Link} to="/api-demo" className="text-white">Api</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown" className="text-white">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
               <NavDropdown.Divider />
-             </NavDropdown>
+            </NavDropdown>
             <Nav.Link href="#" disabled className="text-white">Link</Nav.Link>
           </Nav>
           <Form className="d-flex">

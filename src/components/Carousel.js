@@ -3,10 +3,9 @@ import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img1 from '../../public/uploads/img1.jpg'; // Adjust the relative paths and file extensions for your images
-import img2 from '../../public/uploads/img2.jpg';
-import img3 from '../../public/uploads/img3.jpg';
 
+import img1 from '../uploads/img1.jpg';
+ 
 const Carousel = () => {
   const settings = {
     dots: true,
@@ -41,13 +40,13 @@ const Carousel = () => {
     <div className="mx-auto max-w-screen-lg">
       <Slider {...settings}>
         <div>
-          <img src={img1} alt="Slide 1" />
+          <img src={img1} alt="Slide 1" style={{ width: '100%', height: '200%' }} />
         </div>
         <div>
-          <img src={img2} alt="Slide 2" />
+          <img src={img1} alt="Slide 2" style={{ width: '100%', height: '200%' }} />
         </div>
         <div>
-          <img src={img3} alt="Slide 3" />
+          <img src={img1} alt="Slide 3" style={{ width: '100%', height: '200%' }} />
         </div>
         {/* Add more slides as needed */}
       </Slider>

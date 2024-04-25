@@ -1,15 +1,19 @@
- // App.js
-
 import React from 'react';
- 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavScrollExample from './components/NavScrollExample';
+import ApiDemo from './pages/ApiDemo'; // Update the import path
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <Router>
+      <div>
+        <NavScrollExample />
+        <Switch>
+          <Route path="/api-demo" component={ApiDemo} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
- 
